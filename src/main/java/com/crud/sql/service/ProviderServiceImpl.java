@@ -41,8 +41,9 @@ public class ProviderServiceImpl implements IProviderService{
 	@Override
 	public void eliminateProvider(int id) {
 		// TODO Auto-generated method stub
-		iProviderDAO.deleteById(id);
-		
+		iProviderDAO.deleteById(null);
 	}
+
+	
 
 }

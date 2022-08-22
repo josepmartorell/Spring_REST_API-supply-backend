@@ -39,7 +39,7 @@ public class PieceController {
 		return piece_xid;
 	}
 	
-	@PutMapping("/providers/{id}")
+	@PutMapping("/pieces/{id}")
 	public Piece updatePiece(@PathVariable(name="id")int id,@RequestBody Piece piece) {
 		Piece piece_selected = new Piece();
 		Piece piece_updated = new Piece();
@@ -51,8 +51,8 @@ public class PieceController {
 		return piece_updated;
 	}
 	
-	@DeleteMapping("/providers/{id}")
-	public void eliminateProvider(@PathVariable(name="id") int id) {
+	@DeleteMapping("/pieces/{id}")
+	public void eliminatePiece(@PathVariable(name="id") int id) {
 		pieceServiceImpl.eliminatePiece(id);
 	}
 	
